@@ -34,6 +34,7 @@ defmodule SplitByDict do
   end
 
   defp reducer(x, {acc, r, []}), do: {x <> "|" <> acc, r, []}
+
   defp reducer(x, {acc, [_ | rt] = r, [acc_str_head | acc_str_tail] = acc_str_l}) do
     if String.starts_with?(x, acc_str_head) do
       t = String.slice(x, String.length(acc_str_head), String.length(x))
