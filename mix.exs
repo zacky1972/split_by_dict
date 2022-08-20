@@ -32,7 +32,7 @@ defmodule SplitByDict.MixProject do
 
   defp docs do
     [
-      main: "SplitByDict",
+      main: "README",
       extras: ["README.md"]
     ]
   end
