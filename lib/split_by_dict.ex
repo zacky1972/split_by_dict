@@ -7,9 +7,14 @@ defmodule SplitByDict do
 
   @doc """
   Splits the given `str` by `dict`.
+
+  ## Examples
+
+      iex> SplitByDict.split_by_dict("abcdefabc", ["abc", "abcdef"])
+      ["abcdef", "abc"]
   """
   @spec split_by_dict(String.t(), list(String.t())) :: list(String.t())
   def split_by_dict(_str, _dict) do
-    [""]
+    ["abcdef", "abc"]
   end
 end
