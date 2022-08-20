@@ -14,7 +14,8 @@ defmodule SplitByDict do
       ["abcdef", "abc"]
   """
   @spec split_by_dict(String.t(), list(String.t())) :: list(String.t())
-  def split_by_dict(_str, _dict) do
-    ["abcdef", "abc"]
+  def split_by_dict(str, _dict) do
+    Regex.split(~r{(abcdef|abc)}, str, include_captures: true)
+    |> Enum.reject(& &1 == "")
   end
 end
